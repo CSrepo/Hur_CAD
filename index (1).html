@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jungwon Hur | Teaching Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --paper: #fffdf8;
+      --text: #252525;
+      --muted: #686158;
+      --accent: #465f52;
+      --accent-dark: #33493e;
+      --soft: #ebe5dc;
+      --line: #ddd6ca;
+      --card: #f8f5ef;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 20px 56px;
+    }
+
+    header, section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    header {
+      padding: 42px 34px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      letter-spacing: -0.04em;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      margin: 0 0 7px;
+      font-size: 1.02rem;
+    }
+
+    p { margin: 0 0 12px; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin-bottom: 5px; }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover { border-bottom-color: var(--accent-dark); }
+
+    .subtitle {
+      margin: 8px 0 18px;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .contact, .actions, nav, .tags, .demo-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .button, .demo-btn {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      border-radius: 999px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: #2b2b2b;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fffdf8;
+    }
+
+    .button:hover, .demo-btn:hover {
+      border-color: var(--accent);
+      background: #e1d8cc;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+      color: #fffdf8;
+    }
+
+    nav {
+      margin: 0 0 18px;
+    }
+
+    nav a {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 13px;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.86rem;
+    }
+
+    section {
+      padding: 28px 32px;
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+    }
+
+    .box, .project-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 17px;
+    }
+
+    .project-card p { color: var(--muted); }
+
+    .tag {
+      background: var(--soft);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-family: Arial, sans-serif;
+      font-size: 0.84rem;
+      color: #3e3a35;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 20px;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { padding: 0; }
+      nav, .actions, .demo-buttons { display: none; }
+      header, section { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Jungwon Hur</h1>
+      <p class="subtitle">Computer Science, STEM, and CAD / Engineering Design Educator</p>
+      <div class="contact">
+        <span>Fort Collins, Colorado</span>
+        <a href="mailto:hurjungwon@gmail.com">email</a>
+        <a href="https://www.linkedin.com/in/hurjungwon" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.credly.com/users/hurjungwon/badges#credly" target="_blank" rel="noopener">Credly</a>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+        <a class="button" href="#demos">Teaching Demos</a>
+        <a class="button" href="#projects">Projects</a>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#demos">Demos</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#leadership">Leadership</a>
+    </nav>
+
+    <section id="profile">
+      <h2>Professional Profile</h2>
+      <p>CTE-licensed Computer Science and STEM educator with experience teaching high school and concurrent enrollment courses. Background in programming, cybersecurity, CAD, engineering design, and technology support.</p>
+      <p>I design clear, hands-on learning experiences that connect classroom skills to college, careers, and real-world STEM pathways.</p>
+    </section>
+
+    <section id="philosophy">
+      <h2>Teaching Philosophy</h2>
+      <p>I believe all students can learn when instruction is meaningful, structured, and connected to real-world application.</p>
+      <p>I work to create a safe, respectful learning environment where students feel comfortable asking questions, making mistakes, and building confidence.</p>
+      <p>My teaching emphasizes active learning, problem-solving, project-based learning, and differentiated support for diverse learners.</p>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Computer Science Instructor</h3>
+          <p class="small">Colorado Early Colleges | 2024–Present</p>
+          <ul>
+            <li>Teach Python, Java, cybersecurity, digital literacy, and college-level CS courses.</li>
+            <li>Create project-based lessons connected to real-world programming and STEM careers.</li>
+            <li>Use data-driven instruction and differentiation to support student growth.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Math & CS Tutor | Substitute Teacher</h3>
+          <p class="small">2021–Present</p>
+          <ul>
+            <li>Support students in Algebra, Pre-Calculus, and Computer Science.</li>
+            <li>Provide targeted intervention based on learning gaps.</li>
+            <li>Maintain structured and supportive classroom environments.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<section id="demos">
+  <h2>Interactive Teaching Demos</h2>
+  <p>Sample platforms I use to create hands-on learning in coding, robotics, and engineering design.</p>
+
+  <div class="grid">
+
+    <div class="project-card">
+      <img src="images/python.png" alt="Python Coding Demo">
+      <h3>Python Coding</h3>
+      <p>Students write and test functions using an interactive coding environment.</p>
+      <a href="https://trinket.io/python3" target="_blank">Open Demo</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/microbit.png" alt="Microbit Demo">
+      <h3>Micro:bit</h3>
+      <p>Students explore sensors, inputs, and real-world computing applications.</p>
+      <a href="https://makecode.microbit.org/" target="_blank">Open Demo</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/vex.png" alt="VEX VR Demo">
+      <h3>VEX VR Robotics</h3>
+      <p>Students apply logic and automation using virtual robotics simulations.</p>
+      <a href="https://vr.vex.com/" target="_blank">Open Demo</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/cad.png" alt="CAD Design Demo">
+      <h3>CAD Design (Fusion 360)</h3>
+      <p>Students create 3D models and learn engineering design using industry tools.</p>
+      <a href="https://www.autodesk.com/products/fusion-360/overview" target="_blank">View Tool</a>
+    </div>
+
+  </div>
+</section>
+
+    <section id="projects">
+      <h2>Project-Based Learning Examples</h2>
+      <div class="grid">
+        <div class="project-card">
+          <h3>CAD & Engineering Design</h3>
+          <p>Students learn sketching, dimensioning, 3D modeling, and prototyping using tools such as AutoCAD, Inventor, Fusion 360, and Creo.</p>
+         <div class="tags">
+  <a href="cad.html" class="tag" target="_blank">CAD</a>
+  <span class="tag">Design Process</span>
+  <span class="tag">3D Modeling</span>
+</div>
+        </div>
+        <div class="project-card">
+          <h3>Python Coding</h3>
+          <p>Students build functions, test inputs and outputs, debug errors, and connect programming concepts to math and real-world problem solving.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Functions</span><span class="tag">Debugging</span></div>
+        </div>
+        <div class="project-card">
+          <h3>Robotics & Physical Computing</h3>
+          <p>Students use Micro:bit or VEX VR to practice variables, logic, sensors, movement, and iterative problem-solving in an engaging STEM context.</p>
+          <div class="tags"><span class="tag">Micro:bit</span><span class="tag">VEX VR</span><span class="tag">Robotics</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cad">
+      <h2>CAD & Engineering Design Background</h2>
+      <p>My engineering and CAD background supports CTE pathways in drafting, design technology, engineering design, and manufacturing-related coursework.</p>
+      <div class="grid">
+        <div class="box">
+          <h3>Industry Experience</h3>
+          <p>Developed 2D/3D CAD models, prototypes, technical drawings, GD&T documentation, and production components.</p>
+        </div>
+        <div class="box">
+          <h3>Classroom Application</h3>
+          <p>Prepared to teach CAD fundamentals, design thinking, modeling, prototyping, and certification-ready technical skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <h2>Education & Credentials</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Education</h3>
+          <ul>
+            <li>M.S., Computer Information Systems — Colorado State University</li>
+            <li>B.S., Computer Science — Han Yang University</li>
+            <li>A.A.S., Drafting Technology — Lone Star College</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Licensure</h3>
+          <ul>
+            <li>CTE License — Information Technology</li>
+            <li>CTE License — Engineering & Technology</li>
+            <li>Colorado Substitute License</li>
+            <li>Praxis Math & Computer Science — Passed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Certifications & Skills</h2>
+      <div class="tags">
+        <span class="tag">Microsoft Office Specialist</span>
+        <span class="tag">AutoCAD</span>
+        <span class="tag">Inventor</span>
+        <span class="tag">Fusion 360</span>
+        <span class="tag">SOLIDWORKS CSWA</span>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">C++</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Project-Based Learning</span>
+        <span class="tag">Differentiation</span>
+        <span class="tag">Data-Driven Instruction</span>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <h2>Achievements & Leadership</h2>
+      <ul>
+        <li>Coding Club Coach, 2023–Present</li>
+        <li>HP CodeWars — coached team to 2nd place</li>
+        <li>Lockheed Martin CyberQuest — coached team to 1st place</li>
+      </ul>
+    </section>
+
+    <footer>
+      Jungwon Hur | Teaching Portfolio
+    </footer>
+  </div>
+</body>
+</html>
