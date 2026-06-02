@@ -1,56 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CAD Portfolio</title>
-<style>
-body {
-    font-family: Arial;
-    background: #f5f5f5;
-    padding: 2rem;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-.card {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-}
-img {
-    width: 100%;
-    border-radius: 4px;
-}
-a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #0077cc;
-    font-weight: bold;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>CAD Portfolio | Jungwon Hur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #1f2a44;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .intro {
+      margin-bottom: 30px;
+    }
+
+    .intro a {
+      color: #1f2a44;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .intro a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #1f2a44;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #2f3d63;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>CAD Portfolio</h1>
+<header>
+  <h1>Jungwon Hur</h1>
+  <p>CAD Designer | Mechanical Drafter | Wire EDM</p>
+</header>
 
-<div class="grid">
+<div class="container">
 
+  <div class="intro">
+    <h2>CAD Portfolio</h2>
+    <p>
+      This portfolio highlights my experience in <strong>mechanical design, CAD drafting, and manufacturing-ready documentation</strong>.
+      My work includes detailed part modeling, assemblies, and designs optimized for machining processes including 
+      <strong>CNC milling, turning, and Wire EDM</strong>.
+    </p>
+
+    <p>
+      🔗 View more CAD work on Onshape: <br>
+      <a href="https://cad.onshape.com/documents?nodeId=ab634b688141923070302071&resourceType=folder" target="_blank">
+        Onshape CAD Workspace
+      </a>
+    </p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- Adapter Project -->
     <div class="card">
-        <img src="adap1.png">
-        <h3>Adapter Design</h3>
-        <a href="adapter1.pdf" target="_blank">View PDF</a>
+      <img src="adap1.png" alt="Adapter CAD">
+      <div class="card-content">
+        <h3>Adapter Component</h3>
+        <p>
+          Precision-machined adapter designed with manufacturability in mind. 
+          Includes tolerance considerations and CNC-ready geometry.
+        </p>
+        <a href="adapter1.pdf" class="btn" target="_blank">View PDF</a>
+      </div>
     </div>
 
+    <!-- Connector Project -->
     <div class="card">
-        <img src="conn1.png">
-        <h3>Connector Pin</h3>
-        <a href="conn_1.pdf" target="_blank">View PDF</a>
+      <img src="conn1.png" alt="Connector CAD">
+      <div class="card-content">
+        <h3>Connector Design</h3>
+        <p>
+          Mechanical connector model developed for assembly integration. 
+          Designed for durability and compatibility with mating components.
+        </p>
+        <a href="conn_1.pdf" class="btn" target="_blank">View PDF</a>
+      </div>
     </div>
+
+  </div>
 
 </div>
+
+<footer>
+  © 2026 Jungwon Hur | CAD Portfolio
+</footer>
 
 </body>
 </html>
