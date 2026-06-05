@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,12 +17,19 @@
     header {
       background: #1f2a44;
       color: white;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
     .container {
@@ -30,18 +38,14 @@
       padding: 20px;
     }
 
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
     .intro {
       margin-bottom: 30px;
-    }
-
-    .intro a {
-      color: #1f2a44;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .intro a:hover {
-      text-decoration: underline;
     }
 
     .gallery {
@@ -98,6 +102,7 @@
       color: #777;
     }
   </style>
+
 </head>
 
 <body>
@@ -109,87 +114,109 @@
 
 <div class="container">
 
+  <!-- 🔹 MAIN TITLE (this is now your real header) -->
+
+  <h2>CAD Gallery</h2>
+
   <div class="intro">
-    <h2>CAD Portfolio</h2>
     <p>
-      This portfolio highlights my experience in <strong>mechanical design, CAD drafting, and manufacturing-ready documentation</strong>.
-      My work includes detailed part modeling, assemblies, and designs optimized for machining processes including 
-      <strong>CNC milling, turning, and Wire EDM</strong>.
+      Portfolio showcasing mechanical design, CAD drafting, and manufacturing-ready models.
+      Experience includes CNC machining, sheet metal, and Wire EDM-focused design.
     </p>
 
-    <p>
-      🔗 View more CAD work on Onshape: <br>
-      <a href="https://cad.onshape.com/documents?nodeId=ab634b688141923070302071&resourceType=folder" target="_blank">
-        Onshape CAD Workspace
-      </a>
-    </p>
+```
+<p>
+  🔗 <a href="https://cad.onshape.com/documents?nodeId=ab634b688141923070302071&resourceType=folder" target="_blank">
+    View Onshape CAD Workspace
+  </a>
+</p>
+```
+
   </div>
-<h2>Sheet Metal Drawings</h2>
+
+  <!-- 🔹 PRIMARY WORK -->
+
+  <h2>Engineering Drawings & Assemblies</h2>
   <div class="gallery">
 
-    <!-- Adapter Project -->
-    <div class="card">
-      <img src="adap1.png" alt="Adapter CAD">
-      <div class="card-content">
-        <h3>Adapter Component</h3>
-        <p>
-          Precision-machined adapter designed with manufacturability in mind. 
-          Includes tolerance considerations and CNC-ready geometry.
-        </p>
-        <a href="adapter1.pdf" class="btn" target="_blank">View PDF</a>
-      </div>
-    </div>
+```
+<div class="card">
+  <img src="adap1.png" alt="Adapter CAD">
+  <div class="card-content">
+    <h3>Adapter Component</h3>
+    <p>Precision-machined adapter with CNC-ready geometry and tolerances.</p>
+    <a href="adapter1.pdf" class="btn" target="_blank">View PDF</a>
+  </div>
+</div>
 
-    <!-- Connector Project -->
-    <div class="card">
-      <img src="conn1.png" alt="Connector CAD">
-      <div class="card-content">
-        <h3>Connector Design</h3>
-        <p>
-          Mechanical connector model developed for assembly integration. 
-          Designed for durability and compatibility with mating components.
-        </p>
-        <a href="conn_1.pdf" class="btn" target="_blank">View PDF</a>
-      </div>
-    </div>
+<div class="card">
+  <img src="conn1.png" alt="Connector CAD">
+  <div class="card-content">
+    <h3>Connector Design</h3>
+    <p>Mechanical connector designed for assembly integration and durability.</p>
+    <a href="conn_1.pdf" class="btn" target="_blank">View PDF</a>
+  </div>
+</div>
 
-    <!-- Sheet Metal Drawing -->
 <div class="card">
   <img src="shtPart.png" alt="Sheet Metal Drawing">
-
   <div class="card-content">
-    <h3>Sheet Metal Part – Fabrication Drawing</h3>
-
-    <p>
-      Sheet metal CAD drawing prepared for manufacturing.
-      Includes flat pattern considerations, bend-aware design,
-      and production-ready documentation.
-    </p>
-
-    <a href="shtPart1.pdf" class="btn" target="_blank">
-      View Drawing (PDF)
-    </a>
+    <h3>Sheet Metal Part</h3>
+    <p>Flat pattern and bend-aware fabrication drawing.</p>
+    <a href="shtPart1.pdf" class="btn" target="_blank">View PDF</a>
   </div>
 </div>
 
-<!-- Clamp Assembly Project -->
 <div class="card">
-  <img src="clamp_assy1.png" alt="Clamp Assembly CAD">
-
+  <img src="clamp_assy1.png" alt="Clamp Assembly">
   <div class="card-content">
-    <h3>Clamp Assembly – Mechanical Design</h3>
-
-    <p>
-      Mechanical clamp assembly designed with component fit, alignment,
-      and manufacturability in mind. Demonstrates assembly structure,
-      part interaction, and production-ready documentation.
-    </p>
-
-    <a href="clamp_assy1.pdf" class="btn" target="_blank">
-      View Assembly Drawing (PDF)
-    </a>
+    <h3>Clamp Assembly</h3>
+    <p>Mechanical assembly with component fit and interaction.</p>
+    <a href="clamp_assy1.pdf" class="btn" target="_blank">View PDF</a>
   </div>
 </div>
+```
+
+  </div>
+
+  <!-- 🔹 NEW SECTION -->
+
+  <h2>Additional CAD Models</h2>
+  <div class="gallery">
+
+```
+<div class="card">
+  <img src="helix1.png" alt="Helix Model 1">
+  <div class="card-content">
+    <h3>Helix Model 1</h3>
+    <p>Curve-driven helical geometry with parametric control.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="helix.png" alt="Helix Model">
+  <div class="card-content">
+    <h3>Helical Structure</h3>
+    <p>3D spiral demonstrating advanced geometric modeling.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="tire.png" alt="Tire Model">
+  <div class="card-content">
+    <h3>Tire Model</h3>
+    <p>Patterned rotational model with surface detailing.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="wrench.png" alt="Wrench">
+  <div class="card-content">
+    <h3>Wrench</h3>
+    <p>Mechanical tool modeled with precision and constraints.</p>
+  </div>
+</div>
+```
 
   </div>
 
