@@ -2,219 +2,281 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CAD Portfolio | Jungwon Hur</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jungwon Hur | CAD Portfolio</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    header {
-      background: #1f2a44;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #f4f6f8;
+  color: #222;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #0f172a;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 25px 20px;
+}
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      opacity: 0.9;
-    }
+.sidebar h2 {
+  margin-bottom: 5px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+.sidebar p {
+  font-size: 14px;
+  color: #aaa;
+}
 
-    h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 12px 0;
+}
 
-    .intro {
-      margin-bottom: 30px;
-    }
+.sidebar a:hover {
+  color: white;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+/* MAIN */
+.main {
+  margin-left: 270px;
+  padding: 30px;
+  width: calc(100% - 270px);
+}
 
-    .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
+/* HEADER */
+.header h1 {
+  margin: 0;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.header p {
+  color: #666;
+  margin-bottom: 25px;
+}
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+/* SECTION */
+.section {
+  margin-bottom: 50px;
+}
 
-    .card-content {
-      padding: 15px;
-    }
+.section h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
 
-    .card-content h3 {
-      margin-top: 0;
-    }
+/* GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #1f2a44;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
+/* CARD */
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
 
-    .btn:hover {
-      background: #2f3d63;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+.card img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #0f172a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal img {
+  display: block;
+  margin: 60px auto;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+/* BADGES */
+.badges img {
+  width: 120px;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.badges img:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+</style>
 
 </head>
 
 <body>
 
-<header>
-  <h1>Jungwon Hur</h1>
-  <p>CAD Designer | Mechanical Drafter | Wire EDM</p>
-</header>
+<!-- SIDEBAR -->
 
-<div class="container">
+<div class="sidebar">
+  <h2>Jungwon Hur</h2>
+  <p>CAD Designer<br>CS & CAD Instructor</p>
 
-  <!-- 🔹 MAIN TITLE (this is now your real header) -->
+<a href="#portfolio">Portfolio</a> <a href="#certifications">Certifications</a> <a href="resume.pdf" target="_blank">Resume</a>
 
-  <h2>CAD Gallery</h2>
+  <br>
+  <p style="font-size:12px;">© 2026</p>
+</div>
 
-  <div class="intro">
-    <p>
-      Portfolio showcasing mechanical design, CAD drafting, and manufacturing-ready models.
-      Experience includes CNC machining, sheet metal, and Wire EDM-focused design.
-    </p>
+<!-- MAIN -->
+
+<div class="main">
+
+  <!-- HEADER -->
+
+  <div class="header">
+    <h1>CAD Portfolio</h1>
+    <p>Mechanical design, parametric modeling, and production-ready drawings.</p>
+  </div>
+
+  <!-- PORTFOLIO -->
+
+  <div id="portfolio" class="section">
+    <h2>Engineering Drawings & Assemblies</h2>
 
 ```
-<p>
-  🔗 <a href="https://cad.onshape.com/documents?nodeId=ab634b688141923070302071&resourceType=folder" target="_blank">
-    View Onshape CAD Workspace
+<div class="gallery">
+
+  <div class="card">
+    <img src="adap1.png" onclick="openModal(this.src)">
+    <div class="card-content">
+      <h3>Adapter Component</h3>
+      <p>Precision-machined adapter with detailed tolerancing.</p>
+      <a href="adapter1.pdf" class="btn" target="_blank">PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="conn1.png" onclick="openModal(this.src)">
+    <div class="card-content">
+      <h3>Connector Design</h3>
+      <p>Mechanical connector for assembly integration.</p>
+      <a href="conn_1.pdf" class="btn" target="_blank">PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="shtPart.png" onclick="openModal(this.src)">
+    <div class="card-content">
+      <h3>Sheet Metal Part</h3>
+      <p>Flat pattern with bend allowances.</p>
+      <a href="shtPart1.pdf" class="btn" target="_blank">PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="clamp_assy1.png" onclick="openModal(this.src)">
+    <div class="card-content">
+      <h3>Clamp Assembly</h3>
+      <p>Assembly with multi-part interaction.</p>
+      <a href="clamp_assy1.pdf" class="btn" target="_blank">PDF</a>
+    </div>
+  </div>
+
+</div>
+
+<h2 style="margin-top:40px;">Additional CAD Models</h2>
+
+<div class="gallery">
+
+  <div class="card">
+    <img src="helix.png" onclick="openModal(this.src)">
+    <div class="card-content"><h3>Helix Model</h3></div>
+  </div>
+
+  <div class="card">
+    <img src="helix1.png" onclick="openModal(this.src)">
+    <div class="card-content"><h3>Helix Variant</h3></div>
+  </div>
+
+  <div class="card">
+    <img src="tire.png" onclick="openModal(this.src)">
+    <div class="card-content"><h3>Tire Model</h3></div>
+  </div>
+
+  <div class="card">
+    <img src="wrench.png" onclick="openModal(this.src)">
+    <div class="card-content"><h3>Wrench</h3></div>
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <!-- CERTIFICATIONS -->
+
+  <div id="certifications" class="section">
+    <h2>Certifications</h2>
+
+```
+<div class="badges">
+  <a href="https://www.credly.com/users/hurjungwon/badges#credly" target="_blank">
+    <img src="badge1.png" alt="Credly Badge">
   </a>
-</p>
-```
-
-  </div>
-
-  <!-- 🔹 PRIMARY WORK -->
-
-  <h2>Engineering Drawings & Assemblies</h2>
-  <div class="gallery">
-
-```
-<div class="card">
-  <img src="adap1.png" alt="Adapter CAD">
-  <div class="card-content">
-    <h3>Adapter Component</h3>
-    <p>Precision-machined adapter with CNC-ready geometry and tolerances.</p>
-    <a href="adapter1.pdf" class="btn" target="_blank">View PDF</a>
-  </div>
-</div>
-
-<div class="card">
-  <img src="conn1.png" alt="Connector CAD">
-  <div class="card-content">
-    <h3>Connector Design</h3>
-    <p>Mechanical connector designed for assembly integration and durability.</p>
-    <a href="conn_1.pdf" class="btn" target="_blank">View PDF</a>
-  </div>
-</div>
-
-<div class="card">
-  <img src="shtPart.png" alt="Sheet Metal Drawing">
-  <div class="card-content">
-    <h3>Sheet Metal Part</h3>
-    <p>Flat pattern and bend-aware fabrication drawing.</p>
-    <a href="shtPart1.pdf" class="btn" target="_blank">View PDF</a>
-  </div>
-</div>
-
-<div class="card">
-  <img src="clamp_assy1.png" alt="Clamp Assembly">
-  <div class="card-content">
-    <h3>Clamp Assembly</h3>
-    <p>Mechanical assembly with component fit and interaction.</p>
-    <a href="clamp_assy1.pdf" class="btn" target="_blank">View PDF</a>
-  </div>
-</div>
-```
-
-  </div>
-
-  <!-- 🔹 NEW SECTION -->
-
-  <h2>Additional CAD Models</h2>
-  <div class="gallery">
-
-```
-<div class="card">
-  <img src="helix1.png" alt="Helix Model 1">
-  <div class="card-content">
-    <h3>Helix Model 1</h3>
-    <p>Curve-driven helical geometry with parametric control.</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="helix.png" alt="Helix Model">
-  <div class="card-content">
-    <h3>Helical Structure</h3>
-    <p>3D spiral demonstrating advanced geometric modeling.</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="tire.png" alt="Tire Model">
-  <div class="card-content">
-    <h3>Tire Model</h3>
-    <p>Patterned rotational model with surface detailing.</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="wrench.png" alt="Wrench">
-  <div class="card-content">
-    <h3>Wrench</h3>
-    <p>Mechanical tool modeled with precision and constraints.</p>
-  </div>
 </div>
 ```
 
@@ -222,9 +284,21 @@
 
 </div>
 
-<footer>
-  © 2026 Jungwon Hur | CAD Portfolio
-</footer>
+<!-- MODAL -->
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modalImg").src = src;
+}
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
