@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,9 +26,7 @@ body {
   padding: 25px 20px;
 }
 
-.sidebar h2 {
-  margin-bottom: 5px;
-}
+.sidebar h2 { margin-bottom: 5px; }
 
 .sidebar p {
   font-size: 14px;
@@ -43,9 +40,7 @@ body {
   margin: 12px 0;
 }
 
-.sidebar a:hover {
-  color: white;
-}
+.sidebar a:hover { color: white; }
 
 /* MAIN */
 .main {
@@ -55,9 +50,7 @@ body {
 }
 
 /* HEADER */
-.header h1 {
-  margin: 0;
-}
+.header h1 { margin: 0; }
 
 .header p {
   color: #666;
@@ -65,9 +58,7 @@ body {
 }
 
 /* SECTION */
-.section {
-  margin-bottom: 50px;
-}
+.section { margin-bottom: 50px; }
 
 .section h2 {
   border-bottom: 2px solid #ddd;
@@ -90,17 +81,19 @@ body {
   transition: 0.2s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+.card:hover { transform: translateY(-5px); }
 
 .card img {
   width: 100%;
 }
 
-.card-content {
-  padding: 15px;
+.card video {
+  width: 100%;
+  display: block;
 }
+
+/* CONTENT */
+.card-content { padding: 15px; }
 
 .card-content h3 {
   margin: 0 0 8px;
@@ -170,122 +163,147 @@ body {
 <body>
 
 <!-- SIDEBAR -->
-
 <div class="sidebar">
   <h2>Jungwon Hur</h2>
   <p>CAD Designer<br>CS & CAD Instructor</p>
 
-<a href="#portfolio">Portfolio</a> <a href="#certifications">Certifications</a> <a href="resume.pdf" target="_blank">Resume</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#animations">Animations</a>
+  <a href="#certifications">Certifications</a>
+  <a href="resume.pdf" target="_blank">Resume</a>
 
   <br>
   <p style="font-size:12px;">© 2026</p>
 </div>
 
 <!-- MAIN -->
-
 <div class="main">
 
   <!-- HEADER -->
-
   <div class="header">
     <h1>CAD Portfolio</h1>
     <p>Mechanical design, parametric modeling, and production-ready drawings.</p>
   </div>
 
   <!-- PORTFOLIO -->
-
   <div id="portfolio" class="section">
     <h2>Engineering Drawings & Assemblies</h2>
 
-```
-<div class="gallery">
+    <div class="gallery">
 
-  <div class="card">
-    <img src="adap1.png" onclick="openModal(this.src)">
-    <div class="card-content">
-      <h3>Adapter Component</h3>
-      <p>Precision-machined adapter with detailed tolerancing.</p>
-      <a href="adapter1.pdf" class="btn" target="_blank">PDF</a>
+      <div class="card">
+        <img src="adap1.png" onclick="openModal(this.src)">
+        <div class="card-content">
+          <h3>Adapter Component</h3>
+          <p>Precision-machined adapter with detailed tolerancing.</p>
+          <a href="adapter1.pdf" class="btn" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="conn1.png" onclick="openModal(this.src)">
+        <div class="card-content">
+          <h3>Connector Design</h3>
+          <p>Mechanical connector for assembly integration.</p>
+          <a href="conn_1.pdf" class="btn" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="shtPart.png" onclick="openModal(this.src)">
+        <div class="card-content">
+          <h3>Sheet Metal Part</h3>
+          <p>Flat pattern with bend allowances.</p>
+          <a href="shtPart1.pdf" class="btn" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="clamp_assy1.png" onclick="openModal(this.src)">
+        <div class="card-content">
+          <h3>Clamp Assembly</h3>
+          <p>Assembly with multi-part interaction.</p>
+          <a href="clamp_assy1.pdf" class="btn" target="_blank">PDF</a>
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <div class="card">
-    <img src="conn1.png" onclick="openModal(this.src)">
-    <div class="card-content">
-      <h3>Connector Design</h3>
-      <p>Mechanical connector for assembly integration.</p>
-      <a href="conn_1.pdf" class="btn" target="_blank">PDF</a>
+    <h2 style="margin-top:40px;">Additional CAD Models</h2>
+
+    <div class="gallery">
+
+      <div class="card">
+        <img src="helix.png" onclick="openModal(this.src)">
+        <div class="card-content"><h3>Helix Model</h3></div>
+      </div>
+
+      <div class="card">
+        <img src="helix1.png" onclick="openModal(this.src)">
+        <div class="card-content"><h3>Helix Variant</h3></div>
+      </div>
+
+      <div class="card">
+        <img src="tire.png" onclick="openModal(this.src)">
+        <div class="card-content"><h3>Tire Model</h3></div>
+      </div>
+
+      <div class="card">
+        <img src="wrench.png" onclick="openModal(this.src)">
+        <div class="card-content"><h3>Wrench</h3></div>
+      </div>
+
     </div>
+
   </div>
 
-  <div class="card">
-    <img src="shtPart.png" onclick="openModal(this.src)">
-    <div class="card-content">
-      <h3>Sheet Metal Part</h3>
-      <p>Flat pattern with bend allowances.</p>
-      <a href="shtPart1.pdf" class="btn" target="_blank">PDF</a>
+  <!-- ANIMATIONS -->
+  <div id="animations" class="section">
+    <h2>CAD Animations</h2>
+
+    <div class="gallery">
+
+      <div class="card">
+        <video controls>
+          <source src="assy_animation_test.mp4" type="video/mp4">
+          <source src="assy_animation_test.mpeg" type="video/mpeg">
+          Your browser does not support the video tag.
+        </video>
+        <div class="card-content">
+          <h3>Assembly Motion Study</h3>
+          <p>Kinematic simulation demonstrating mechanism movement and interaction.</p>
+        </div>
+      </div>
+
+      <!-- OPTIONAL: autoplay preview version -->
+      <!--
+      <div class="card">
+        <video autoplay muted loop playsinline>
+          <source src="animation.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+          <h3>Quick Motion Preview</h3>
+        </div>
+      </div>
+      -->
+
     </div>
-  </div>
-
-  <div class="card">
-    <img src="clamp_assy1.png" onclick="openModal(this.src)">
-    <div class="card-content">
-      <h3>Clamp Assembly</h3>
-      <p>Assembly with multi-part interaction.</p>
-      <a href="clamp_assy1.pdf" class="btn" target="_blank">PDF</a>
-    </div>
-  </div>
-
-</div>
-
-<h2 style="margin-top:40px;">Additional CAD Models</h2>
-
-<div class="gallery">
-
-  <div class="card">
-    <img src="helix.png" onclick="openModal(this.src)">
-    <div class="card-content"><h3>Helix Model</h3></div>
-  </div>
-
-  <div class="card">
-    <img src="helix1.png" onclick="openModal(this.src)">
-    <div class="card-content"><h3>Helix Variant</h3></div>
-  </div>
-
-  <div class="card">
-    <img src="tire.png" onclick="openModal(this.src)">
-    <div class="card-content"><h3>Tire Model</h3></div>
-  </div>
-
-  <div class="card">
-    <img src="wrench.png" onclick="openModal(this.src)">
-    <div class="card-content"><h3>Wrench</h3></div>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- CERTIFICATIONS -->
-
   <div id="certifications" class="section">
     <h2>Certifications</h2>
 
-```
-<div class="badges">
-  <a href="https://www.credly.com/users/hurjungwon/badges#credly" target="_blank">
-    <img src="badge1.png" alt="Credly Badge">
-  </a>
-</div>
-```
-
+    <div class="badges">
+      <a href="https://www.credly.com/users/hurjungwon/badges#credly" target="_blank">
+        <img src="badge1.png" alt="Credly Badge">
+      </a>
+    </div>
   </div>
 
 </div>
 
 <!-- MODAL -->
-
 <div id="modal" class="modal" onclick="closeModal()">
   <img id="modalImg">
 </div>
